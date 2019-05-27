@@ -11,14 +11,13 @@
   <title>LuMar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script>
-    function alertaDeCompra() {
-      
-        alert("Para realizar uma compra, você precisa fazer login! Para isso, clique no botão 'Fazer Login' à direita da tela!");
-       
+    function alertaDeCompra() {      
+        alert("Para realizar uma compra, você precisa fazer login! Para isso, clique no botão 'Fazer Login' à direita da tela!");       
       }    
   </script>
   
@@ -27,18 +26,20 @@
     .navbar {
       margin-bottom: 10px;
       border-radius: 0;
+      padding:0px;
     }
     
     /* Remove the jumbotron's default bottom margin */ 
      .jumbotron {
       margin-bottom: 0;
-      padding: 10px;
+      padding: 0px;
     }
    
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
-      padding: 25px;
+      color: red;
+      padding: 5px;
     }
   </style>
 </head>
@@ -46,7 +47,14 @@
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h2>Digital LuMar - Confira os produtos oferecidos pela melhor loja da Internet</h2>      
+    <h3>Digital LuMar - Confira abaixo os produtos oferecidos pela melhor loja da Internet, 
+        ou pesquise por um produto específico</h3>
+      <form class="form-inline" action="crudecommerce" method="post">
+        Pesquise aqui:
+        <input type="text" class="form-control" size="60" id="descricao" name="descricao" placeholder="Digite a descrição de um produto!">
+        <button type="button" class="btn btn-danger">Pesquisar!</button><br><br>
+    
+    </form>
   </div>
 </div>
 
@@ -58,7 +66,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" style="padding:4px; float: bottom"><i class="fas fa-globe" style="font-size:40px;color:red;"></i></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -127,12 +135,8 @@
   </div>
 </div><br><br>
 
-<footer class="container-fluid text-center">    
-  <form class="form-inline">Obter ofertas:
-    <input type="email" class="form-control" size="60" placeholder="Digite seu email">
-    <button type="button" class="btn btn-danger">Inscreva-se!</button><br><br>
-    &copy; Desenvolvido por Luciane Benetti e Marco Sena.
-  </form>
+<footer class="container-fluid text-center">
+    &copy; Desenvolvido por Luciane Benetti e Marco Sena.  
 </footer>
 
 </body>
